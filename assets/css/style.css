@@ -19,6 +19,7 @@ main{
     background-color: lightblue;
     color: black;
     flex: 1;
+    padding: 10px;
 }
 button{
     background-color: rgb(196, 20, 20);
@@ -34,6 +35,8 @@ button{
 footer{
     background-color: cyan;
     padding: 10px;
+    justify-content: center;
+    display: flex;
 }
 .bola{
     background-color: rgb(248, 78, 78);
@@ -64,4 +67,35 @@ footer{
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
     
+}
+ul{
+    padding: 10px;
+    margin: 10px;
+    list-style-type: square;
+    display: flex;
+    gap: 5%;
+}
+.carro{
+    font-style: italic;
+}
+.esportivo-classico{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.familiar{
+    font-weight: 100;
+    color:lightseagreen
+}
+.suv{
+    color: purple;
+}
+[title]{
+    text-transform: uppercase;
+} /*utilizar title="title-desejado" permite selecionar atributos com um title específico. caso utilize title~="title-desejado" pode aplicar estilos a elementos que possuem pelo menos parte do title, como title~="carro" par aplicar a um elemento cujo title seja "carro esportivo"*/
+/*title |= "elemento" aplica estilos a elementos cujo title seja exatamente "elemento" ou que comece com "elemento-"*/
+/*title^="elemento" aplica estilos a elementos cujo title comece com "elemento"*/
+/*title$="elemento" aplica estilos a elementos cujo title termine com "elemento"*/
+/*title*="elemento" aplica estilos a elementos cujo title contenha "elemento"*/
+.esportivo-classico, .familiar, .suv{
+    background-color: lightgray;
 }
