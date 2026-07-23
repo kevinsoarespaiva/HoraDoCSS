@@ -78,13 +78,17 @@ ul{
 .carro{
     font-style: italic;
 }
+.lista-carros>ul>li{
+    border-radius: 10px;
+    padding: 5px;
+}
 .esportivo-classico{
     font-weight: bold;
     text-decoration: underline;
 }
 .familiar{
     font-weight: 100;
-    color:lightseagreen
+    color:rgb(25, 88, 85)
 }
 .suv{
     color: purple;
@@ -92,10 +96,59 @@ ul{
 [title]{
     text-transform: uppercase;
 } /*utilizar title="title-desejado" permite selecionar atributos com um title específico. caso utilize title~="title-desejado" pode aplicar estilos a elementos que possuem pelo menos parte do title, como title~="carro" par aplicar a um elemento cujo title seja "carro esportivo"*/
-/*title |= "elemento" aplica estilos a elementos cujo title seja exatamente "elemento" ou que comece com "elemento-"*/
-/*title^="elemento" aplica estilos a elementos cujo title comece com "elemento"*/
-/*title$="elemento" aplica estilos a elementos cujo title termine com "elemento"*/
-/*title*="elemento" aplica estilos a elementos cujo title contenha "elemento"*/
+    /*title |= "elemento" aplica estilos a elementos cujo title seja exatamente "elemento" ou que comece com "elemento-"*/
+    /*title^="elemento" aplica estilos a elementos cujo title comece com "elemento"*/
+    /*title$="elemento" aplica estilos a elementos cujo title termine com "elemento"*/
+    /*title*="elemento" aplica estilos a elementos cujo title contenha "elemento"*/
 .esportivo-classico, .familiar, .suv{
-    background-color: lightgray;
+    background-color: rgb(198, 197, 197);
+}
+.atributos{
+    display: block;
+    list-style-type: circle;
+
+}
+/*Seletores: 
+    * - seleciona todos os elementos
+    .classe - seleciona todos os elementos com a classe especificada
+    #id - seleciona o elemento com o id especificado
+    elemento - seleciona todos os elementos do tipo especificado (ex: p, div, h1)
+    elemento.classe - seleciona todos os elementos do tipo especificado com a classe especificada
+    elemento#id - seleciona o elemento do tipo especificado com o id especificado
+    elemento1, elemento2 - seleciona todos os elementos do tipo especificado (ex: p, div, h1)
+    elemento1 > elemento2 - seleciona todos os elementos do tipo especificado que são filhos diretos do elemento pai especificado. Subitens não são selecionados
+    elemento1 + elemento2 - seleciona o primeiro elemento do tipo especificado que é imediatamente precedido pelo elemento pai especificado (o primeiro elemento que vier após o fechamento da tag pai)
+    elemento1 ~ elemento2 - seleciona todos os elementos do tipo especificado que são precedidos pelo elemento pai especificado (todos os elementos do tipo especificado que vierem após o fechamento da tag pai)
+    elemento1 elemento2 - seleciona todos os elementos do tipo especificado que são descendentes do elemento pai especificado
+    elemento[atributo] - seleciona todos os elementos do tipo especificado que possuem o atributo especificado
+    elemento ^= ""
+*/
+/*initial serve para definir o valor inicial de uma propriedade, ou seja, o valor que a propriedade teria se não tivesse sido definida.
+inherit serve para definir que a propriedade deve herdar o valor da propriedade do elemento pai.*/
+#retangulo{
+    position: relative;
+    margin: auto;
+    background-color: rgb(0,148,64);
+    height: 250px;
+    width: 400px;
+}
+#losango {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 365px;
+  height: 226.8px;
+  background-color: rgb(255, 203, 0);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+#circulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    background-color: #0A31A6;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%
 }

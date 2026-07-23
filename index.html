@@ -13,7 +13,7 @@
     <main>
         
         <p>Este é um parágrafo de teste para verificar a aplicação do CSS.</p>
-        <button>Clique aqui</button>    
+        <button onclick="alert('este botão não faz nada, mas obrigado por clicar')">Clique aqui</button>    
         <br>
         <br>
         <section>
@@ -27,14 +27,69 @@
         <section>
             <div class="lista-carros">
                 <ul>
-                    <li title="1" class="carro esportivo-classico">Ford Maverick</li>
-                    <li class="carro esportivo-classico">Chevrolet Opala</li>
-                    <li title="1" class="carro familiar">Volkswagen Fusca</li>
-                    <li class="carro familiar">Fiat Uno</li>
-                    <li title="1" class="carro suv">Honda HR-V</li>
-                    <li class="carro suv">Toyota Corolla-Cross</li>
+                    <li title="1" class="carro esportivo-classico">
+                        Ford Maverick
+                        <ul class="atributos">
+                            <li>Potência: 197cv</li>
+                            <li>Torque: 39,5kgfm</li>
+                            <li>Ano: 1975</li>
+                        </ul>
+                    </li>
+                    <li class="carro esportivo-classico">
+                        Chevrolet Opala
+                        <ul class="atributos">
+                            <li>Potência: 171cv</li>
+                            <li>Torque: 32,5kgfm</li>
+                            <li>Ano: 1976</li>
+                        </ul>
+
+                    </li>
+                    <li title="1" class="carro familiar">
+                        Volkswagen Fusca
+                    <ul class="atributos">
+                            <li>Potência: 65cv</li>
+                            <li>Torque: 12kgfm</li>
+                            <li>Ano: 1976</li>
+                        </ul>
+                    </li>
+                    <li class="carro familiar">
+                        Fiat Uno
+                        <ul class="atributos">
+                            <li>Potência: 48,5cv</li>
+                            <li>Torque: 7,4kgfm</li>
+                            <li>Ano: 1990</li>
+                        </ul>
+                    </li>
+                    <li title="1" class="carro suv">
+                        Honda HR-V
+                        <ul class="atributos">
+                            <li>Potência: 177cv</li>
+                            <li>Torque: 24,5kgfm</li>
+                            <li>Ano: 2026</li>
+                        </ul>                        
+                    </li>
+                    <li class="carro suv">
+                        Toyota Corolla-Cross
+                        <ul class="atributos">  
+                            <li>Potência: 175cv</li>
+                            <li>Torque: 21,3kgfm</li>
+                            <li>Ano: 2026</li>
+                        </ul> 
+                    </li>
                 </ul>
+            </div>            
+        </section>
+        <section class="posicionamento">
+            <div class="formas">
+                <div id="retangulo">
+                    <div id="losango">
+                        <div id="circulo">
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
         
     </main>
