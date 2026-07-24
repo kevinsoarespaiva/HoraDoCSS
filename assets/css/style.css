@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+html, body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,10 @@ main{
     flex: 1;
     padding: 10px;
 }
+section{
+    margin: 20px 20px;
+    border: 10px 10px;
+}
 button{
     background-color: rgb(196, 20, 20);
     color: white;
@@ -35,8 +39,12 @@ button{
 footer{
     background-color: cyan;
     padding: 10px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+}
+section>h2{
+    display: flex;
+    justify-content: center;
 }
 .bola{
     background-color: rgb(248, 78, 78);
@@ -151,4 +159,93 @@ inherit serve para definir que a propriedade deve herdar o valor da propriedade 
     height: 150px;
     width: 150px;
     border-radius: 50%
+}
+.cores{
+    width: 247.5px;
+    height: 217.5px;
+    margin: auto;
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+.cores>div{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vermelho{
+    position: absolute;
+    transform: translate(0%, 45%);    
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 0, 0, 0.75);
+}
+#verde{
+    position: absolute;
+    transform: translate(35%, 0%);    
+    height: 150px;
+    width: 150px;
+    background-color: rgba(0, 128, 0, 0.75);
+}
+#azul{
+    position: absolute;
+    transform: translate(65%, 45%);    
+    height: 150px;
+    width: 150px;
+    background-color: rgba(0, 0, 255, 0.75);
+}
+.galeria{
+    display: flex;
+}
+.quadro{
+    border-radius: 5px;
+    height: 250px;
+    width: 400px;
+    border: #000000 solid;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+#imagem-contain{
+    object-fit: contain;
+}
+#imagem-cover{
+    object-fit: cover;
+}
+#imagem-none{
+    object-fit: none;
+    object-position: left 35%;
+}
+#imagem-scale-down{
+    object-fit: scale-down;
+}
+.background{
+    width: inherit;
+    min-height: 600px;
+    border-radius: 5px;
+    border: #000000 solid;
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/960px-Coca-Cola_logo.svg.png');*/
+}
+#fundo{
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+#fundo>div{
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    border: #000000 solid;
+
+}
+#linear{
+    background-image: linear-gradient(lightblue, cyan, purple);
+}
+#radial{
+    background-image: radial-gradient(lightpink, pink, rgb(255, 95, 236));
+}
+#theme{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/960px-Coca-Cola_logo.svg.png');
 }
