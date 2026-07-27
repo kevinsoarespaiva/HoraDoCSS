@@ -233,17 +233,16 @@ img{
     border: #000000 solid;
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/960px-Coca-Cola_logo.svg.png');*/
 }
-#fundo{
+.fundo{
     display: flex;
     width: 100%;
     height: 600px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Alterna o comportamento padrão do flex que seria nowrap e iria espremer o conteúdo para caber em uma só linha.*/
 }
-#fundo>div{
+.fundo>div{
     width: 50%;
     border-radius: 5px;
     border: #000000 solid;
-
 }
 #linear{
     background-image: linear-gradient(lightblue, cyan, purple);
@@ -254,6 +253,8 @@ img{
 #theme{
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/960px-Coca-Cola_logo.svg.png'), url('https://static.brusheezy.com/system/resources/previews/000/048/378/non_2x/hi-defintion-cracked-paint-texture-photoshop-textures.jpg');
     background-size: 20%, contain; /*background-size aceita os mesmos valores pré-definidos que o img aceita, como cover e contain*/
+    /*para alterar o comportamento do repeat do background (se a imagem se repete ou não caso não preencha todo o campo e como ela se repete), pode usar background-repeat='' e adicio nar valores como repeat-x, para se rpetir apen no eixo X, repeat-y para o eixo Y, space para que a imagem se repita, porém sem cortar a imagem, adicionando um espaço entre as imagens para preencher a parte que seria completa por uma imagem cortada e no-repeat para não se repetir. Se adicionar dois valores separados por espaço, pode alterar individualmente o comportamento dos eixos*/
+    /*background-position pode ser usado para alterar o posicionamento da imagem de fundo e segue o padrão de dois valores separados por vírgula para alterar o eixo x e y.*/
 }
 #pattern{
     background:
@@ -270,4 +271,77 @@ img{
         radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 37%) 50px 50px;
     background-color:#b03;
     background-size:100px 100px;
+}
+.attachment{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    flex-wrap: wrap; /*Alterna o comportamento padrão do flex que seria nowrap e iria espremer o conteúdo para caber em uma só linha.*/
+}
+.attachment>div{
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    border: #000000 solid;
+    background-image: url('..//images/porsche-911-gt3-rs.jpeg');
+    background-size: cover;
+    overflow: auto;
+}
+#fixed{
+    background-attachment: fixed; /*faz aquele efeito bem legal de imagem parada mesmo enquanto rolamos a página, Usam bastante isso em anuncios ou layouts complexos de sites de carro.*/
+    background-position: center;
+}
+#scroll{/*padrão*/
+    background-attachment: scroll; /*Mantém a imagem de fundo fixa em relação ao texto, mesmo ao rolar o texto de fundo, a imagem permanece*/
+}
+#local{
+    background-attachment: local;
+    background-position: center;
+    /*rola a imagem junto com o texto*/
+}
+/*Dica de UX: Evite scroll interno em áreas grandes/genéricas do layout principal. Quando scroll interno for necessário (menus, sidebars, modais), garanta que a área tenha limite visual claro e considere overscroll-behavior: contain. e confira o layout em tamanhos mobile, para garantir que o usuário consegue rolar pelo item*/
+#placeholder{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSibH_cfxmiganZeY4PcTfIJAABeY6tk_iCr2OAkk8_hlHVz4MFPS9TNJer&s=10');
+    background-size: 10%;
+}
+.origin-clip{
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    flex-wrap: wrap;
+}
+.origin-clip>div{
+    margin: 20px;
+    padding: 25px;
+    width: 500px;
+    height: 400px;
+    border: #0A31A6 dashed 10px;
+    background-image: url('https://i.pinimg.com/736x/08/99/26/0899264cf87b2049af55675f54f7b526.jpg');
+    background-repeat: no-repeat;
+    background-position: 60%, center;
+    background-size: cover;
+    box-sizing:unset ;
+
+}
+#origin-border{
+    background-origin: border-box;
+}
+#origin-padding{
+    background-origin: padding-box;
+}
+#origin-content{
+    background-origin: content-box;
+}
+#text{
+    -webkit-background-clip: text; /*Para compatibilidade com o Chrome*/
+    color: transparent;
+    background-image: none;
+    background: linear-gradient(315deg, transparent 75%, #d45d55 0)-10px 0,
+    linear-gradient(45deg, transparent 75%, #d45d55 0)-10px 0,
+    linear-gradient(135deg, #a7332b 50%, transparent 0) 0 0,
+    linear-gradient(45deg, #6a201b 50%, #561a16 0) 0 0 #561a16;
+    background-size: 20px 20px;   
+    font-size: 35px;
+    font-weight: 900;
+    background-clip: text;
 }
