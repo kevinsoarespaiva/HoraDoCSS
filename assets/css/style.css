@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: serif, arial, sans-serif; /*fall back=fontes alternativas para caso o navegador não encontre a primeira, segunda.. fontes.*/
 }
 html, body{
     min-height: 100vh;
@@ -442,6 +442,8 @@ img{
     display: flex;
     border: #000000 solid thick;
     width: inherit;
+    padding: 5px;
+    border-radius: 5px;
 }
 .border>div{
     margin: auto;
@@ -457,7 +459,47 @@ img{
     width: 250px;
     height: 250px;
     background-color: lightgoldenrodyellow;
-    border-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/960px-Coca-Cola_logo.svg.png);
-    border-image-slice: 100;
-    border-image-repeat: repeat;
+    border-image: url(../images/Borda\ teste.png);
+    border-image-slice: 102;
+    border-image-repeat: round;
+    border-image-width: 15px;
+    border-image-outset: 20px;
+}
+#linear-gradient{
+    background-color: antiquewhite;
+    height: 250px;
+    width: 250px;
+    border-width: 20px;
+    border-style: solid;
+    border-image-source: linear-gradient(lightpink, rgb(255, 68, 99));
+    border-image-slice: 1;
+    border-image-repeat: round;
+}
+/*Para usar a propiedade border-image como shorthand, siga a ordem e barras: border-image: source slice / width / outset repeat;
+Entre slice, width e outset, se for usar apenas um deles, a barra é dispensada pois os demais valores utilizam descrições diferentes e o navegador não irá confundir*/
+.fontes{
+    margin: auto;
+}
+#teste-fontes{
+    width: inherit;
+    min-height: 600px;
+    display: flex;
+    border: #000000 solid thick;
+    padding: 5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+
+}
+#teste-fontes>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height:200px;
+    width: 50%;
+    border-radius: 5px;
+    border: #000000 solid;
+}
+#honk{
+    
 }
