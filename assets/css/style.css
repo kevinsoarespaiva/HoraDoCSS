@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+
+@font-face {
+    font-family: Honk;
+    src: local(Honk), url("../fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf"); 
+}
 *{
     margin: 0;
     padding: 0;
@@ -499,7 +505,13 @@ Entre slice, width e outset, se for usar apenas um deles, a barra é dispensada 
     width: 50%;
     border-radius: 5px;
     border: #000000 solid;
+    font-size: 24px;
 }
-#honk{
-    
+#honk, #honk *{
+    font-size: 24px;
+    font-family: Honk;
+}
+#ballet, #ballet *{
+    font-family: Ballet;
+    font-weight: 600;
 }
