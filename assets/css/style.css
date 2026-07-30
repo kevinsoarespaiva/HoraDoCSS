@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Danfo&family=Handjet:wght,ELSH@100..900,2&display=swap');
 
 @font-face {
     font-family: Honk;
@@ -299,6 +300,7 @@ img{
 }
 #scroll{/*padrão*/
     background-attachment: scroll; /*Mantém a imagem de fundo fixa em relação ao texto, mesmo ao rolar o texto de fundo, a imagem permanece*/
+    line-height: 150%;
 }
 #local{
     background-attachment: local;
@@ -459,6 +461,7 @@ img{
     height: 250px;
     width: 250px;
     border-radius: 50%/20%;
+    box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.801);
 }
 #border-img{
     border: 20px solid;
@@ -486,7 +489,7 @@ Entre slice, width e outset, se for usar apenas um deles, a barra é dispensada 
 .fontes{
     margin: auto;
 }
-#teste-fontes{
+.teste-fontes{
     width: inherit;
     min-height: 600px;
     display: flex;
@@ -494,9 +497,10 @@ Entre slice, width e outset, se for usar apenas um deles, a barra é dispensada 
     padding: 5px;
     border-radius: 5px;
     flex-wrap: wrap;
+    margin: 5px;
 
 }
-#teste-fontes>div{
+.teste-fontes>div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -508,10 +512,87 @@ Entre slice, width e outset, se for usar apenas um deles, a barra é dispensada 
     font-size: 24px;
 }
 #honk, #honk *{
-    font-size: 24px;
     font-family: Honk;
 }
 #ballet, #ballet *{
     font-family: Ballet;
     font-weight: 600;
+}
+#bitcount, #bitcount *{
+    font-family: "Bitcount Grid Double Ink"; 
+}
+#danfo, #danfo *{
+    font-family: Danfo;
+}
+#handjet, #handjet *{
+    font-family: Handjet;
+    font-weight: 600;
+}
+#small-caps, #small-caps *{
+    font: small-caps 30px/150% arial;
+}
+.center p{
+    border: #000000 dashed thin;
+    padding: 10px;
+}
+.text{
+    font-size: 16px;
+}
+#capitalize{
+    text-transform: capitalize;
+}
+#lower{
+    text-transform: lowercase;
+}
+#upper{
+    text-transform: uppercase;
+}
+#right{
+    text-align: right;
+}
+#center{
+    text-align: center;
+}
+#left{
+    text-align: left;
+}
+#text-decoration{
+    text-decoration: underline wavy purple;
+    text-indent: 20px;
+}
+#lw-spacing{
+    letter-spacing: 5px;
+    word-spacing: 15px;
+}
+#vertical-rl{
+    writing-mode: vertical-rl; 
+    /*"nowrap" elimina quebras de linhas e escreve o texto inteiro em uma linha só. **Ignora múltiplos espaços
+    "pre" segue as quebras de linha do texto original, do HTML, mesmo que isso signifique sair do elemento pai, ele só quebra a linha quando o texto que brar a linha. **Aceita múltiplos espaços
+    "pre-line" quebra o texto quando houver quebra de texto no HTML E quando chega ao fim do elemento pai. **Ignora múltiplos espaços
+    "pre-wrap" quebra o texto quando houver quebra de texto no HTML E quando chega ao fim do elemento pai.  **Aceita múltiplos espaços *espaços em branco podem ultrapassar o limite do elemento pai
+    "break-spaces" quebra o texto quando houver quebra de texto no HTML E quando chega ao fim do elemento pai.  **Aceita múltiplos espaços *espaços em branco irão quebrar linha se necessário para não ultrapassar o limite do elemento pai
+    */
+}
+#vertical-lr{
+    writing-mode: vertical-lr;
+}
+#vertical-rl, #vertical-lr{
+    height: 25%;
+}
+/*word-wrap: break-word; pode ser usado se você for um psicopata e quiser que a palavra seja quebrada para inserir uma quebra de linha. Pelo menos ele não começa uma palavra que não irá caber. Mas se você for psicota nível 3, pode usar o word-break com o valor break-all para escrever o texto da forma mais corrida possível.
+word-break: keep-all pode ser útil para escrever textos em idiomas como o mandarim e outros textos asiáticos, onde a linha não pode ser quebrada para não mudar o sentido.
+o keep-all diferencia idiomas, ele se comportará como normal caso o idioma aceite quebras de linha. 
+*/ 
+#drop-shadow img{
+    filter: drop-shadow(10px 5px 3px gray); /*muito massa!!!*/
+    width: 70%;
+}
+#text-shadow{
+    text-shadow: 5px 3px 4px;
+}
+#opacity{
+    background: url(../images/porsche-911-gt3-rs.jpeg) rgb(255, 170, 73); 
+    background-size: contain;
+    background-repeat: space;
+    opacity: .5; 
 }
