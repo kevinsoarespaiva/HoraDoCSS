@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: Honk;
-    src: local(Honk), url("../fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf"); 
+    src: local(Honk), u  rl("../fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf"); 
 }
 *{
     margin: 0;
@@ -596,3 +596,33 @@ o keep-all diferencia idiomas, ele se comportará como normal caso o idioma acei
     background-repeat: space;
     opacity: .5; 
 }
+.overflow{
+    display: flex;
+    min-height: 600px;
+    width: inherit;
+    border: #000000 solid;
+    flex-wrap: wrap;
+    border-radius: 5px;
+
+}
+.overflow>div{
+    width: 250px;
+    height: 100px;
+    border: #000000 solid;
+    border-radius: 5px;
+    margin: auto;
+    background: #d4a755;
+} 
+#overflow-visible{
+    overflow: visible;
+}
+#overflow-hidden{
+    overflow: hidden;
+}
+#overflow-scroll{
+    overflow: scroll;
+}
+#overflow-auto{
+    overflow: auto;
+}
+/*Também é possível controlar o overflow individualmente sobre o vertical e horizontal usando overflow-x e overflow-y. Ambos aceitam os mesmos valores que a propriedade passadas ao valor padrão.*/
